@@ -1,0 +1,39 @@
+<%- include(`partials/header`); -%>
+
+<h1>Home</h1>
+
+<p><%= homeContent %></p>
+
+<% newPosts.forEach(function (newPost) { %>
+
+<h1><%= newPost.userTitle; %></h1>
+<p>
+	<%= newPost.userPost.substring(0, 100) + `...`; %>
+	<a class="inline" href="/post/<%= newPost.userTitle %>">Read More</a>
+</p>
+
+<% }); %> <%- include(`partials/footer`); -%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- @@@@ for loop method @@@@ -->
+
+  <%# for( let i = 0; i<newPosts.length; i++ ) { %>
+	<!-- <h1><%#= newPosts[i].userTitle %></h1> -->
+	<!-- <p><%#= newPosts[i].userPost %></p> -->
+	<%# }; %>
+
